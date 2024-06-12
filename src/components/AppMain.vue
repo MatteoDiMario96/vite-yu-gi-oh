@@ -1,5 +1,9 @@
 <script>
+import MainCardsList from '../components/AppMain/MainCardsList.vue';
 export default {
+    components:{
+        MainCardsList,
+    },
     data() {
         return {
             
@@ -19,6 +23,7 @@ export default {
         <h1>
             Sono Main
         </h1>
+        <!--MainCardsList-->
     </main>
 </template>
 
