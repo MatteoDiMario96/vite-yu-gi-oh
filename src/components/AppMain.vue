@@ -17,7 +17,7 @@ export default {
             axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=30&offset=0')
             .then((response) => {
                 // handle success
-                this.cards.push(...response.data.data);
+                this.cards = response.data.data;
                 console.log(this.cards);
             })
             .catch(function (error) {
@@ -39,7 +39,9 @@ export default {
     <main>
         <div>
             <MainSelect/>
-            <MainCardsList/>
+            <MainCardsList
+            :cards="cards"
+            />
         </div>
     </main>
 </template>
