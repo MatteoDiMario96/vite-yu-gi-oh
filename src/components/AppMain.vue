@@ -54,6 +54,7 @@ main{
     div{
         max-width: $width_container;
         margin: 0 auto;
+        padding-top: 3rem;
     }
 }
 
