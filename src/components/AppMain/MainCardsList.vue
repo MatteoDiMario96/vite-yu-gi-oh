@@ -54,23 +54,40 @@ export default {
 
 div#container{
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
     background-color: white;
     section{
         width: 100%;
         h2{
             background-color: black;
             color: $text_color;
+            padding: .5rem .7rem .5rem .7rem;
+            font-size: 1rem;
         }
             div#cards{
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 div.card{
-                    width: calc((100% / 5) - .4rem);
-                    margin-right: .35rem;
+                    width: calc((100% / 5) - 1rem);
+                    margin-right: 1rem;
+                    background-color: $main_color;
+                    margin-bottom: .8rem;
                     img{
                         width: 100%;
+                        margin-bottom: .4rem;
+                    }
+                    h3{
+                        color: $text_color;
+                        text-align: center;
+                        margin-bottom: .4rem;
+                        font-size: .8rem;
+                    }
+                    h4{
+                        font-weight: 100;
+                        text-align: center;
+                        font-size: .7rem;
+                        margin-bottom: .4rem;
                     }
                 }
             }
