@@ -29,7 +29,7 @@ export default {
     <div id="container">
         <section>
             <h2>
-                Found * cards
+                Found 20 cards
             </h2>
             <div id="cards">
                 <MainCard  v-for="(card,index) in cards" :key="card.id"
@@ -46,7 +46,7 @@ export default {
 
 div#container{
     width: 100%;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 3rem 2rem 1rem 3rem;
     background-color: white;
     section{
         width: 100%;
@@ -55,6 +55,7 @@ div#container{
             color: $text_color;
             padding: .5rem .7rem .5rem .7rem;
             font-size: 1rem;
+            margin-right: 1rem;
         }
             div#cards{
                 width: 100%;
