@@ -29,7 +29,7 @@ export default {
             {{ singleCard.name }}
         </h3>
         <h4>
-            {{ singleCard.type }}
+            {{ singleCard.race }}
         </h4>
     </div>
 </template>
@@ -50,12 +50,15 @@ div.card{
         text-align: center;
         margin-bottom: .4rem;
         font-size: .8rem;
+        padding: .4rem;
+        text-transform: uppercase;
     }
     h4{
         font-weight: 100;
         text-align: center;
         font-size: .7rem;
         margin-bottom: .4rem;
+        text-transform: uppercase;
     }
 }
 
