@@ -7,7 +7,7 @@ export default {
     },
     props:{
         cards:{
-            type: Array,
+            type: Object,
             required: true,
         }
     },
@@ -32,17 +32,9 @@ export default {
                 Found * cards
             </h2>
             <div id="cards">
-                <div class="card" v-for="(card,index) in cards" :key="card.id">
-                <div>
-                    <img :src="card.card_images[0].image_url" :alt="card.name">
-                </div>
-                <h3>
-                    {{ card.name }}
-                </h3>
-                <h4>
-                    {{ card.type }}
-                </h4>
-            </div>
+                <MainCard  v-for="(card,index) in cards" :key="card.id"
+                :singleCard="card"
+                />
             </div>
         </section>
     </div>
@@ -68,28 +60,7 @@ div#container{
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                div.card{
-                    width: calc((100% / 5) - 1rem);
-                    margin-right: 1rem;
-                    background-color: $main_color;
-                    margin-bottom: .8rem;
-                    img{
-                        width: 100%;
-                        margin-bottom: .4rem;
-                    }
-                    h3{
-                        color: $text_color;
-                        text-align: center;
-                        margin-bottom: .4rem;
-                        font-size: .8rem;
-                    }
-                    h4{
-                        font-weight: 100;
-                        text-align: center;
-                        font-size: .7rem;
-                        margin-bottom: .4rem;
-                    }
-                }
+                
             }
         }
     }
