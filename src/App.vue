@@ -1,9 +1,24 @@
 <script>
-// Import
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+
+export default {
+  components:{
+    AppHeader,
+    AppMain,
+  },
+  data() {
+    return {
+      count: 0
+    }
+  }
+}
 </script>
 
 <template>
-  
+    <AppHeader/>
+    <AppMain/>
+
 </template>
 
 <style lang="scss">
