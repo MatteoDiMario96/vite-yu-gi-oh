@@ -1,8 +1,10 @@
 <script>
 import MainCardsList from '../components/AppMain/MainCardsList.vue';
+import MainSelect from './AppMain/MainSelect.vue';
 export default {
     components:{
         MainCardsList,
+        MainSelect,
     },
     data() {
         return {
@@ -20,10 +22,10 @@ export default {
 
 <template>
     <main>
-        <h1>
-            Sono Main
-        </h1>
+        <div>
+            <MainSelect/>
         <!--MainCardsList-->
+        </div>
     </main>
 </template>
 
@@ -31,6 +33,11 @@ export default {
 @use '../styles/partials/variables' as *;
 main{
     background-color: $main_color;
+    display: flex;
+    div{
+        max-width: $width_container;
+        margin: 0 auto;
+    }
 }
 
 </style>
