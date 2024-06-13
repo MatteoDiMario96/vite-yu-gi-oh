@@ -5,22 +5,19 @@ export default {
     components:{
         MainCard,
     },
-    props:{
-        cards:{
-            type: Object,
-            required: true,
-        }
-    },
     data() {
         return {
-            // store,
+            store,
         }
     },
     methods:{
 
     },
+    updated() {
+        console.log(555555555, store.archetypeCardsFounded)
+    },
     created(){
-
+        console.log(3436466633 ,store.archetypeCardsFounded)
     }
 }
 </script>
@@ -29,10 +26,10 @@ export default {
     <div id="container">
         <section>
             <h2>
-                Found 20 cards
+                Found {{ store.archetypeCardsFounded.length }} cards
             </h2>
             <div id="cards">
-                <MainCard  v-for="(card,index) in cards" :key="card.id"
+                <MainCard  v-for="(card,index) in store.archetypeCardsFounded.data" :key="index"
                 :singleCard="card"
                 />
             </div>
