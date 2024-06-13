@@ -3,7 +3,7 @@ export default {
     props:{
         singleCard:{
             type: Object,
-            required: true,
+            // required: true,
         }
     },
     data() {
@@ -29,7 +29,7 @@ export default {
             {{ singleCard.name }}
         </h3>
         <h4>
-            {{ singleCard.race }}
+            {{ singleCard.archetype }}
         </h4>
     </div>
 </template>
