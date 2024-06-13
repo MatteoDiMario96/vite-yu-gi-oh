@@ -2,6 +2,7 @@
 import MainCardsList from '../components/AppMain/MainCardsList.vue';
 import MainSelect from './AppMain/MainSelect.vue';
 import axios from 'axios';
+import { store } from '../store';
 export default {
     components:{
         MainCardsList,
@@ -10,27 +11,13 @@ export default {
     data() {
         return {
             cards: [],
+            store,
         }
     },
     methods:{
-        get20CardsApi(){
-            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=30&offset=0')
-            .then((response) => {
-                // handle success
-                this.cards = response.data.data;
-                console.log(this.cards);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .finally(function () {
-                // always executed
-            });
-        }
     },
     created(){
-        this.get20CardsApi();
+
     }
 }
 </script>
@@ -39,9 +26,7 @@ export default {
     <main>
         <div>
             <MainSelect/>
-            <MainCardsList
-            :cards="cards"
-            />
+            <MainCardsList/>
         </div>
     </main>
 </template>
